@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Entity.h"
 
+//klsa drzewa, statyczny obiekt w swiecie
 class Tree:public Entity{
 public:
     Tree(const std::string& n):Entity(n){}

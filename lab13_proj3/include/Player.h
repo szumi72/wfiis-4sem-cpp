@@ -2,6 +2,7 @@
 #include "Charactrer.h"
 #include<iostream>
 
+//klasa grywalnej postaci, nie posiada AI
 class Player:public Charactrer{
 public:
     Player(const std::string& n,Faction fr ,int hp, int man,std::unique_ptr<Class> cls):Charactrer(n,fr,hp,man,std::move(cls)){}

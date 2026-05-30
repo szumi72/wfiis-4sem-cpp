@@ -1,12 +1,14 @@
 #pragma once
 #include<string>
 
+//enum okreslajacy frakcje danej posataci
 enum class Faction{
     NEW_CAMP,
     OLD_CAMP,
     NONE
 };
 
+//funkcja do wypisywania frakcji
 inline std::string factionToString(Faction f){
     switch (f)
     {
@@ -17,12 +19,14 @@ inline std::string factionToString(Faction f){
     }
 }
 
+//enum do okreslania sposobnnosci AI
 enum class AI{
     NEUTRAL,
     ALLY,
     ENEMY
 };
 
+//funkcja do wypisywania sposobnnosci AI
 inline std::string AIToString(AI ai){
     switch (ai)
     {

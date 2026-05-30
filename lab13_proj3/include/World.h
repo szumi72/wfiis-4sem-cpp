@@ -3,16 +3,20 @@
 #include<memory>
 #include "Entity.h"
 
-
+//klasa swiata posiadająca tablice encji w świecie
 class World{
 public:
+
+    //dodawanie encji do swiata
     void addEntity(std::unique_ptr<Entity>ptr){
         entities.emplace_back(std::move(ptr));
     }
+    //czycszczenie swiata z encji
     void clear(){
         entities.clear();
     }
 
+    //wlasny iterator zeby moc iterowac po encjach ktore sa przechowywane w unique_ptr
     class Iterator{
     public:
         Iterator(World* d, size_t id):data(d),idx(id){}
